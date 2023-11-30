@@ -6,53 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    Hello World!<br>
-    Szia Réka!<br>
-    Szia Misi!<br>
-    <button onclick="buttonClicked()">Click me!</button>
-    <button onclick="buttonClicked2()">Click me too!</button>
-    <button onclick="buttonClicked3()">Click me too too!</button>
-    <iframe id="myframe" width="320" height="240"
-        src="https://www.youtube.com/embed/N8NcQzMQN_U?autoplay=1" referrerpolicy="no-referrer-when-downgrade" allow="autoplay">
-      </iframe>
-
-    <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" referrerpolicy="no-referrer-when-downgrade" allow="autoplay">
-    </iframe>
-
-    <iframe id="myiframe3" width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" referrerpolicy="no-referrer-when-downgrade" allow="autoplay" >
-    </iframe>
-    <audio id="myiframe3" width="420" height="345" referrerpolicy="no-referrer-when-downgrade" allow="autoplay" >
-        <source src="felisnavidad.mp3" type="audio/mpeg">
-    </audio>
-    <div style="width: 560px; height: 315px; float: none; clear: both; margin: 2px auto;">
-        <embed
-          src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1"
-          wmode="transparent"
-          type="video/mp4"
-          width="100%" height="100%"
-          allow="autoplay; encrypted-media; picture-in-picture"
-          allowfullscreen
-          title="Keyboard Cat"
-        >
-      </div>
+    <button onclick="startThings()">Show me the juicy!</button>
+    <div style="display: none;" id="maindiv">
+        <audio id="myaudio" width="420" height="345" referrerpolicy="no-referrer-when-downgrade" allow="autoplay" controls autoplay style="display: none;">
+            <source src="felisnavidad.mp3" type="audio/mpeg">
+        </audio>
+    </div>
 </body>
 <script>
     function random_rgba() {
-    var o = Math.round, r = Math.random, s = 255;
-    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
-}
-    function buttonClicked(){
-        document.body.style.backgroundColor = random_rgba();
-    }
-
-    function buttonClicked2(){
-        document.getElementById("myiframe3").setVolume(0.9);
-    }
-    function buttonClicked3(){
-        let audio_iframe = document.getElementById('myframe');
-        widget = SC.Widget(audio_iframe);
-        widget.setVolume(0.9);
+        var o = Math.round, r = Math.random, s = 255;
+        return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
     }
     
+    function startThings(){
+        document.getElementById("maindiv").style.display= "block";
+        document.getElementById("myaudio").play();
+    }
 </script>
 </html>
