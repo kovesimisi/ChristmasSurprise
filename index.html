@@ -22,6 +22,9 @@
     function startThings(){
         document.getElementById("maindiv").style.display= "block";
         document.getElementById("myaudio").play();
+        setInterval(function(){
+            document.body.style.backgroundColor = random_rgba();
+        },1000);
     }
 </script>
 </html>
