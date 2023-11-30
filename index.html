@@ -6,8 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    Hello World!
-    Szia Réka!
-    Szia Misi!
+    Hello World!<br>
+    Szia Réka!<br>
+    Szia Misi!<br>
+    <button onclick="buttonClicked()">Click me!</button>
 </body>
+<script>
+    function random_rgba() {
+    var o = Math.round, r = Math.random, s = 255;
+    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+}
+    function buttonClicked(){
+        document.body.style.backgroundColor = random_rgba();
+    }
+    
+</script>
 </html>
