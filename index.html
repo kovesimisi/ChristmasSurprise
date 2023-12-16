@@ -6,12 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="mybutton" onclick="startThings()" style="position: absolute;display: block;margin: auto;width: auto;height: auto;padding: 10px;left: 50%;font-size: large;top: 50%;transform: translate(-50%, -50%);">Show me the juicy!</button>
+    <button id="mybutton" onclick="startThings()" style="position: absolute;display: block;margin: auto;width: auto;height: auto;padding: 10px;left: 50%;font-size: large;top: 50%;transform: translate(-50%, -50%);">Nyomj meg ha mersz!</button>
     <div style="display: none;" id="maindiv">
         <audio id="myaudio" width="420" height="345" referrerpolicy="no-referrer-when-downgrade" allow="autoplay" controls autoplay style="display: none;">
             <source src="felisnavidad.mp3" type="audio/mpeg">
         </audio>
     </div>
+    <p id="myp" style="position: absolute;display: none;margin: auto;width: auto;height: auto;padding: 10px;left: 50%;font-size: large;top: 50%;transform: translate(-50%, -50%);">Tekerd fel a hangot</p>
 </body>
 <script>
     function random_rgba() {
@@ -26,6 +27,7 @@
             document.body.style.backgroundColor = random_rgba();
         },1000);
         document.getElementById("mybutton").style.display = "none";
+        document.getElementById("myp").style.display = "block";
     }
 </script>
 </html>
